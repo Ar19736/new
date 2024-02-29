@@ -38,17 +38,17 @@ body {
     position: relative;
     width: 30px;
     height: 30px;
-    background: aqua;
+    background: rgb(0, 0, 0);
     margin: 0 4px;
     border-radius: 50%;
-    box-shadow: 0 0 0 10px #4fc3dc44, 0 0 50px aqua, 0 0 100px aqua;
+    box-shadow: 0 0 0 10px #7bb0bc44, 0 0 50px rgb(255, 255, 255), 0 0 100px #7bb0bc44;
     animation: animate 15s linear infinite;
     animation-duration: calc(125s / var(--i));
 }
 
 .bubbles span:nth-child(even) {
-    background: red;
-    box-shadow: 0 0 0 10px red, 0 0 50px aqua, 0 0 100px #4fc3dc44;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 0 0 10px #0000009e, 0 0 50px rgb(255, 255, 255), 0 0 100px #4fc3dc44;
 }
 
 @keyframes animate {
@@ -62,7 +62,7 @@ body {
 
 .heading{
     font-size: 60px;
-    font-family: "Raleway Dots", sans-serif;
+    font-family: "Bebas Neue", sans-serif;
     font-weight: 400;
     font-style: normal;
     color: aqua;
