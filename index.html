@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head> 
     <meta charset="UTF-8">
-    <title>ANIMATION</title>
     <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                  <link href="https://fonts.googleapis.com/css2?family=Raleway+Dots&display=swap" rel="stylesheet">
+                  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
+
 <body>
+<h1 class="heading">My Nostalgia</h1>
+
+
+<div class>
     <div class="container">
-        <div class="bubbles"> 
         <span style="--i:12;"></span>
         <span style="--i:21;"></span>
         <span style="--i:24;"></span>
@@ -26,25 +33,54 @@
         <span style="--i:11;"></span>
         <span style="--i:19;"></span>
         <span style="--i:16;"></span>
-        <span style="--i:12;"></span>
-        <span style="--i:21;"></span>
-        <span style="--i:24;"></span>
-        <span style="--i:13;"></span>
-        <span style="--i:17;"></span>
-        <span style="--i:28;"></span>
-        <span style="--i:11;"></span>
-        <span style="--i:19;"></span>
-        <span style="--i:16;"></span>
-        <span style="--i:12;"></span>
-        <span style="--i:21;"></span>
-        <span style="--i:24;"></span>
-        <span style="--i:13;"></span>
-        <span style="--i:17;"></span>
-        <span style="--i:28;"></span>
-        <span style="--i:11;"></span>
-        <span style="--i:19;"></span>
-        <span style="--i:16;"></span>
-        </div>
+        
     </div>
-</body>
+</div>
+
+<div class="diamond A1"></div>
+<div class="diamond A2"></div>
+<div class="diamond A3"></div>
+<div class="diamond A4"></div>
+<div class="diamond A5"></div>
+<div class="diamond A6"></div>
+<div class="diamond A7"></div>
+<div class="diamond A8"></div>
+<div class="diamond A9"></div>
+<div class="diamond A10"></div>
+<div class="diamond A11"></div>
+<div class="diamond A12"></div>
+
+
+
+<div class="circle one"></div>
+<div class="circle two"></div>
+<div class="circle three"></div>
+<div class="circle four"></div>
+<div class="circle five"></div>
+<div class="circle six"></div>
+<div class="circle seven"></div>
+<div class="circle eight"></div>
+<div class="circle nine"></div>
+<div class="circle ten"></div>
+<div class="circle eleven"></div>
+<div class="circle twelve"></div>
+<div class="circle thirteen"></div>
+<div class="circle fourteen"></div>
+<div class="circle fifteen"></div>
+<div class="circle sixteen"></div>
+<div class="circle seventeen"></div>
+<div class="circle eighteen"></div>
+<script>
+    const circles = document.querySelectorAll('.circle');
+
+    circles.forEach(circle => {
+        circle.addEventListener('click', () => {
+            circle.classList.toggle('expanded');
+        });
+    });
+</script>
+
+
+        <script src="script.js"></script>       
+    </body>
 </html>
