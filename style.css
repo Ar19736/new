@@ -5,6 +5,12 @@
 
 }
 
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
 
 body {
     min-height: 100vh;
@@ -14,50 +20,45 @@ body {
     overflow: hidden; /* Prevent scrollbars */
 }
 
-
-.container{
-    position:relative;
-    width: 100%;
+.container {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100vw;
     height: 100vh;
-    overflow: hidden 
+    overflow: hidden;
 }
 
-.bubbles{
+.bubbles {
     position: relative;
     display: flex;
-
 }
 
-.bubbles span{
+.bubbles span {
     position: relative;
-    width: 30px ;
+    width: 30px;
     height: 30px;
-    background:aqua ;
+    background: aqua;
     margin: 0 4px;
     border-radius: 50%;
-    box-shadow: 0 0 0 10 #4fc3dc44 0 0 50px aqua, 0 0 100px #4fc3dc44;
+    box-shadow: 0 0 0 10px #4fc3dc44, 0 0 50px aqua, 0 0 100px aqua;
     animation: animate 15s linear infinite;
-    animation-duration: calc(125s / var(--i)) ;
+    animation-duration: calc(125s / var(--i));
 }
 
-.bubbles span:nth-child(even){
-    background:red ;
-    box-shadow: 0 0 0 10 red 0 0 50px aqua, 0 0 100px #4fc3dc44;
-    
-
-}
-@keyframes animate{
-   0%{
-    transform: translateY(100vh) scale(0);
-   }
-   100%{
-    transform: translateY(-10vh) scale(1);
-   }
-
-
+.bubbles span:nth-child(even) {
+    background: red;
+    box-shadow: 0 0 0 10px red, 0 0 50px aqua, 0 0 100px #4fc3dc44;
 }
 
-
+@keyframes animate {
+    0% {
+        transform: translateY(100vh) scale(0);
+    }
+    100% {
+        transform: translateY(-10vh) scale(1);
+    }
+}
 
 .heading{
     font-size: 60px;
@@ -94,9 +95,6 @@ body {
 
 
 
-
-
-
 .circle {
     width: 90px;
     height: 90px;
@@ -104,7 +102,7 @@ body {
     border-radius: 50%;
     position: absolute;
     background: rgb(255, 255, 255);
-    transition: all 0.5s;
+    transition: all 0.2s;
 }
 
 
@@ -112,45 +110,73 @@ body {
     width: 150px;
     height: 150px;
      border-radius: 100px;
-    transition: all 0.5s;
+    transition: all 0.2s;
 
     font-size: 100px;
     background-size: cover; /* Ensure the image fills the shape */
 
 }
+
 .expanded {
-    width: 200px;
-    height: 200px;
+    position: fixed; /* Use fixed to position relative to the viewport */
+    z-index: 1;
+    width: 750px;
+    height: 750px;
     border-radius: 20px;
     background: rgb(60, 58, 58);
     font-size: 100px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-size: cover; /* Ensure the image fills the shape */
-    transition: all 0.5s;
 
+
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    background-size: cover; /* Ensure the image fills the shape */
+    transition: all 0.2s;
+    opacity: 0.85;
+}
+
+.expanded.circle:hover {
+    width: 800px;
+    height: 800px;
+
+    transition: all 0.2s;
+    background-size: cover;
 }
 
 
-.one {  top: 20%; left: 20%; background-image: url('2019/image1.jpg');}
-.two { top: 90%; left: 30%; background-image: url('2019/image\ 2.jpg');}
-.three { top: 15%; left: 50%; background-image: url('2019/image\ 2.jpg');}
-.four { top: 80%; left: 80%; background-image: url('2020/2191588.jpg');}
-.five { top: 30%; left: 40%; background-image: url('2020/ab67616d0000b273ad86c21f8ecce4b9873b3dec.jpeg')}
-.six { top: 70%; left: 10%; background-image: url('2020/frank-ocean-cover-new-new.webp')} 
-.seven { top: 50%; left: 90%;background-image: url('2021/Glass_Animals_-_Heat_Waves.png');}
-.eight { top: 60%; left: 70%; background-image: url('2021/More_Life-Drake-cover.webp'); }
-.nine { top: 37%; left: 77%; background-image: url('2021/Sting_-_Shape_of_my_heart.jpg'); }
-.ten { top: 60%; left: 20%; background-image: url('2022/ab67616d0000b273c1c8d2889455db6d03d309ed.jpeg');}
-.eleven { top: 10%; left: 90%; background-image: url('2022/artworks-XTdw6XGAR3WX-0-t500x500.jpg');}
-.twelve { top: 80%; left: 50%; background-image: url('2022/More_Life-Drake-cover\ copy.webp');}
-.thirteen { top: 40%; left: 10%; background-image: url('2023/ab67616d0000b273675561f3defd1d5a551936a8.jpeg');}
-.fourteen { top: 70%; left: 90%; background-image: url('2023/Lil-Baby-Gunna-Drip-Harder.webp');}
-.fifteen { top: 50%; left: 30%; background-image: url('2023/maxresdefault.jpg');}
-.sixteen { top: 10%; left: 70%; background-image: url('2024/350x350.jpg'); }
-.seventeen { top: 80%; left: 20%; background-image: url('2024/5533ab0b513f3e02f481483b9442860e.999x999x1.jpg'); }
-.eighteen { top: 40%; left: 60%; background-image: url('2024/artworks-6BU67RpGI27g-0-t500x500.jpg'); }
+.one { background-image: url('2019/image1.jpg');}
+.two { background-image: url('2019/image\ 2.jpg');}
+.three { background-image: url('2019/image\ 2.jpg');}
+.four { background-image: url('2020/2191588.jpg');}
+.five { background-image: url('2020/ab67616d0000b273ad86c21f8ecce4b9873b3dec.jpeg')}
+.six { background-image: url('2020/frank-ocean-cover-new-new.webp')} 
+.seven { background-image: url('2021/Glass_Animals_-_Heat_Waves.png');}
+.eight { background-image: url('2021/More_Life-Drake-cover.webp'); }
+.nine { background-image: url('2021/Sting_-_Shape_of_my_heart.jpg'); }
+.ten { background-image: url('2022/ab67616d0000b273c1c8d2889455db6d03d309ed.jpeg');}
+.eleven { background-image: url('2022/artworks-XTdw6XGAR3WX-0-t500x500.jpg');}
+.twelve { background-image: url('2022/More_Life-Drake-cover\ copy.webp');}
+.thirteen { background-image: url('2023/ab67616d0000b273675561f3defd1d5a551936a8.jpeg');}
+.fourteen { background-image: url('2023/Lil-Baby-Gunna-Drip-Harder.webp');}
+.fifteen { background-image: url('2023/maxresdefault.jpg');}
+.sixteen { background-image: url('2024/350x350.jpg'); }
+.seventeen { background-image: url('2024/5533ab0b513f3e02f481483b9442860e.999x999x1.jpg'); }
+.eighteen { background-image: url('2024/artworks-6BU67RpGI27g-0-t500x500.jpg'); }
 
 
+/* .metadata {
+    z-index: 999;
+    display: flex;
 
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    color: white;
+} */
+/* 
+.songTitle, .songLyrics, .songDescription, .songLink {
+    display: block;
+    margin-bottom: 10px;
+} */
