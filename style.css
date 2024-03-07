@@ -186,7 +186,7 @@ body {
 .songMetadataLeft {
     display: none;
     position: fixed;
-    top:5vh;
+    top:6vh;
     left:8vw;
 
     background-color: black;
@@ -195,13 +195,15 @@ body {
     border-radius: 10px;
 
     width: 15vw;
+    height: 90vh;
+    overflow: auto;
 }
 
 .songMetadataRight {
     display: none;
     position: fixed;
-    top:5vh;
-    left:70vw;
+    top:6vh;
+    left:77vw;
 
     background-color: black;
     color: white;
@@ -209,6 +211,8 @@ body {
     border-radius: 10px;
 
     width: 15vw;
+    height: 90vh;
+    overflow: auto;
 }
 
 

@@ -6,7 +6,8 @@ circles.forEach(circle => {
     circle.addEventListener('click', () => {
 
         const infoId = circle.getAttribute('data-info');
-        const infoElement = document.querySelector(`.${infoId}`);
+        // Hide all info elements first
+        document.querySelectorAll('.songMetadata').forEach(el => el.style.display = 'none');
 
         // Check if the clicked circle is already expanded
         if (circle.classList.contains('expanded')) {
@@ -17,16 +18,10 @@ circles.forEach(circle => {
             circles.forEach(c => c.classList.remove('expanded'));
             // Expand the clicked circle
             circle.classList.add('expanded');
+            // Show the corresponding info elements for this circle
+            document.querySelectorAll(`.${infoId}`).forEach(el => el.style.display = 'block');
         }
         
-        if (infoElement.style.display === 'none' || !infoElement.style.display) {
-            // Hide all info elements first
-            document.querySelectorAll('.songMetadata').forEach(el => el.style.display = 'none');
-            // Show the corresponding info element
-            infoElement.style.display = 'block';
-        } else {
-            infoElement.style.display = 'none';
-        }
     });
 });
 
