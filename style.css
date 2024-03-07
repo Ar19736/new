@@ -132,7 +132,6 @@ body {
     transform: translate(-50%, -50%) !important;
     background-size: cover; /* Ensure the image fills the shape */
     transition: all 0.2s;
-    opacity: 0.85;
 }
 
 .expanded.circle:hover {
@@ -141,6 +140,7 @@ body {
 
     transition: all 0.2s;
     background-size: cover;
+    opacity: 0.85;
 }
 
 
