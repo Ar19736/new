@@ -6,26 +6,25 @@ circles.forEach(circle => {
     circle.addEventListener('click', () => {
 
         const infoId = circle.getAttribute('data-info');
-        // Hide all info elements first
+        
         document.querySelectorAll('.songMetadata').forEach(el => el.style.display = 'none');
 
-        // Check if the clicked circle is already expanded
+       
         if (circle.classList.contains('expanded')) {
-            // Unexpand the clicked circle
+           
             circle.classList.remove('expanded');
         } else {
-            // Remove expanded class from any other circle that might have it
             circles.forEach(c => c.classList.remove('expanded'));
-            // Expand the clicked circle
+
             circle.classList.add('expanded');
-            // Show the corresponding info elements for this circle
+
             document.querySelectorAll(`.${infoId}`).forEach(el => el.style.display = 'block');
         }
         
     });
 });
 
-// Store the original positions of the diamonds
+
 $('.diamond').each(function(){
     $(this).data('originalTop', $(this).position().top);
     $(this).data('originalLeft', $(this).position().left);
@@ -56,12 +55,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const windowWidth = window.innerWidth;
 
     circles.forEach(circle => {
-        // Generate random positions within the window bounds
+
         const randomTop = Math.random() * (windowHeight - circle.offsetHeight);
         const randomLeft = Math.random() * (windowWidth - circle.offsetWidth);
 
-        // Apply the random positions to each circle
-        circle.style.position = 'absolute'; // Ensure the circles are positioned absolutely
+
+        circle.style.position = 'absolute'; 
         circle.style.top = `${randomTop}px`;
         circle.style.left = `${randomLeft}px`;
     });
